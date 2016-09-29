@@ -1,0 +1,20 @@
+.flex-wrap{
+    position:relative;
+    margin:0 auto;
+    height: 250px;
+    width : 250px;
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    background: #FFF;
+}
+.flex-item{
+    width: 46px;
+    height: 46px;
+    color:#FFF;
+    border-left: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    border-radius: 2px;
+    justify-content: center;
+    align-content: center;
+}

@@ -1,0 +1,24 @@
+<view class="page-header">
+    <text class="page-header-text">{{recordName}}{{record}}</text>
+    <view class="page-header-line"></view>
+    <block wx:if="{{second}}">
+        <text class="page-header-text">{{second}}</text>
+    </block>
+  </view>
+<view class="page">
+    <view style="padding:10px;" bindtap="chooseColor">
+        <view class="flex-wrap" >
+           <block wx:for="{{mColors}}" wx:for-item="mColor">
+                <view class="flex-item bc_green" style="background:rgb({{mColor}},{{mColor}},{{mColor}})" data-position="{{index}}"></view>
+            </block>
+        </view>
+    </view>
+    <view>
+        <modal title="颜色敏感" confirm-text="确定" hidden="{{modalHidden}}" mask bindconfirm="reset" bindcancel="reset">
+            你已过 {{record}} 关!
+        </modal>    
+    </view>
+    <view class="page-body-buttons">
+        <button class="page-body-button" data-color="greem" type="primary" bindtap="beginGrame">开始游戏</button>
+    </view>
+</view>
